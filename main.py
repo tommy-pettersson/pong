@@ -40,7 +40,7 @@ def main():
     score_sprites = pygame.sprite.RenderPlain((left_score, right_score))
 
     while True:
-        clock.tick(60)
+        clock.tick(60)  # 60 FPS
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
