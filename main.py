@@ -26,7 +26,7 @@ def main():
     clock = pygame.time.Clock()
 
     # Initialise ball
-    ball = Ball(BALL_DIAMETER / 2)
+    ball = Ball(int(BALL_DIAMETER / 2))
     ball_sprite = pygame.sprite.RenderPlain(ball)
 
     # Initialise paddles

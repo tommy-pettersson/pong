@@ -1,4 +1,5 @@
 import pygame
+from pygame.gfxdraw import aacircle, filled_circle
 from random import randint
 
 
@@ -17,11 +18,12 @@ class Ball(pygame.sprite.Sprite):
 
         self.radius = radius
         self.image = pygame.Surface((self.radius * 2, self.radius * 2))
-        self.image = self.image.convert_alpha()
         self.image.fill((255, 0, 0))
         self.image.set_colorkey((255, 0, 0))
-        pygame.draw.circle(self.image, (255, 255, 255), (self.radius, self.radius), self.radius)
-
+        aacircle(self.image, self.radius, self.radius, self.radius, (255, 255, 255))
+        filled_circle(self.image, self.radius, self.radius, self.radius, (255, 255, 255))
+        
+        self.image = self.image.convert_alpha()
         self.rect = self.image.get_rect(center=self.area.center)
 
         self.x_speed = new_speed()
