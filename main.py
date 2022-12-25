@@ -58,7 +58,7 @@ def main():
                 if event.key == pygame.K_k:
                     right_paddle.steps = -PADDLE_SPEED  # right paddle up
                 elif event.key == pygame.K_m:
-                    right_paddle.steps = PADDLE_SPEED  # left paddle down
+                    right_paddle.steps = PADDLE_SPEED  # right paddle down
 
             if event.type == pygame.KEYUP:
                 if event.key == pygame.K_a or event.key == pygame.K_z:
