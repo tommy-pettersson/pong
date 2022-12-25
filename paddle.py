@@ -8,7 +8,9 @@ class Paddle(pygame.sprite.Sprite):
         screen = pygame.display.get_surface()
         self.area = screen.get_rect()
 
-        self.x = 20 if side == 'left' else self.area.right - 20
+        self.side = side
+
+        self.x = 20 if self.side == 'left' else self.area.right - 20
         self.y = self.area.height / 2
 
         self.steps = 0

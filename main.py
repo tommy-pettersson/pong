@@ -73,7 +73,10 @@ def main():
 
         # Check paddle collision
         if pygame.sprite.groupcollide(ball_sprite, paddle_sprites, False, False):
-            ball.bounce_x()
+            if ball.x_speed > 0:
+                ball.bounce_x(right_paddle)
+            else:
+                ball.bounce_x(left_paddle)
 
         # Check if any side scores
         ball_left = ball.rect.x - ball.radius
