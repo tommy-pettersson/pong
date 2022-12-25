@@ -4,7 +4,7 @@ from paddle import Paddle
 from scorekeeper import ScoreKeeper
 
 
-PADDLE_SPEED = 5
+PADDLE_SPEED = 10
 BALL_DIAMETER = 20
 
 
