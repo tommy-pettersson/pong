@@ -51,10 +51,7 @@ class Ball(pygame.sprite.Sprite):
         top = self.rect.y - self.radius
         bottom = self.rect.y + self.radius
         if top < 0 or bottom > self.area.bottom:
-            self.bounce_y()
-
-    def bounce_y(self):
-        self.y_speed *= -1
+            self.y_speed *= -1
 
     def bounce_x(self, paddle):
         top = paddle.rect.top
